@@ -1,4 +1,4 @@
-from ventana_principal import *
+from Vista.app import *
 
 class App:
     if __name__ == "__main__":
