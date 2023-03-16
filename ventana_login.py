@@ -47,7 +47,7 @@ class Ventana_Login:
 
         self.btnEnviar = tk.Button(self.ventana_login, text = "Iniciar sesión", width = 10, height = 1)
         self.btnEnviar.grid(row = 6, column = 0, pady = 5)
-        self.btnEnviar.config(command = self.mostrar_usuario)
+        self.btnEnviar.config(command = self.iniciar_ventana_principal)
 
 
     def mostrar_usuario(self):

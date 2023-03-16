@@ -1,18 +1,15 @@
 import tkinter as tk
 from tkinter import *
-from tkinter import messagebox
 
 class Ventana_Principal:
 
     def __init__(self):
-        self.ventana_principal = tk.Tk()
         self.decorar_ventana()
         self.configurar_ventana()
 
         self.dimensiones_ventana()
         self.menu()
         #Tiene que quedar de último
-        self.ventana_principal.mainloop()
 
 
     #Botones, menu, labels, entre otros
