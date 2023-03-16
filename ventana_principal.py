@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
-import pymysql
 
 class Ventana_Principal:
 
@@ -9,7 +8,6 @@ class Ventana_Principal:
         self.ventana_principal = tk.Tk()
         self.decorar_ventana()
         self.configurar_ventana()
-
 
         self.dimensiones_ventana()
         self.menu()

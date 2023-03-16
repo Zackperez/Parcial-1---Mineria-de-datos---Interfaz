@@ -1,16 +1,14 @@
 from app import *
 import tkinter as tk
 from tkinter import *
+from Controlador.ventana_principal_controlador import *
 
 class Ventana_Login:
     def __init__(self):
         self.ventana_login = tk.Tk()
         self.configurar_ventana()
         self.decorar_ventana()
-        root = tk.Tk()
-        Ventana_Login(root)
         self.ventana_login.mainloop()
-
 
     def configurar_ventana(self):
         self.ventana_login.config(bg = "#0D1216")
@@ -49,4 +47,21 @@ class Ventana_Login:
 
         self.btnEnviar = tk.Button(self.ventana_login, text = "Iniciar sesión", width = 10, height = 1)
         self.btnEnviar.grid(row = 6, column = 0, pady = 5)
+        self.btnEnviar.config(command = self.mostrar_usuario)
 
+
+    def mostrar_usuario(self):
+        usuario = self.txt_nombre_usuario.get()
+        password = self.txt_password_usuario.get()
+        print(usuario)
+
+        if usuario == "Jean" and password == "3008":
+        #Inicializador de ventanas
+            self.iniciar_ventana_principal()
+        else:
+            print("Datos erróneos")
+
+    def iniciar_ventana_principal(self):
+        root = tk.Tk()
+        Ventana_Principal_Controlador(root)
+        root.mainloop()

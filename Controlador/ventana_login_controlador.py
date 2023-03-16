@@ -2,22 +2,16 @@ import tkinter as tk
 from Modelo.ventana_login_modelo import *
 from ventana_login import *
 
-
 class Ventana_Login_Controlador:
 
-    def __init__(self, root):
+    def __init__(self):
         self.model = Ventana_Login_Modelo()
-        self.view = Ventana_Login(root)
+        self.view = Ventana_Login()
 
-        self.view.btnGuardar_texto_escrito.config()
-        self.view.btnEnviar.config(command= self.iniciar_sesion)
+        self.view.btnEnviar.config(command = mostrar_usuario)
+        usuario = self.view.txt_nombre_usuario.get()
 
-        
+        def mostrar_usuario():
+            print(usuario)
 
-    def iniciar_sesion(self):
-        nombre_usuario = self.view.txt_nombre_usuario.get()
-        password = self.view.txt_password_usuario.get()
-
-        print(nombre_usuario)
-        print(password)
 
